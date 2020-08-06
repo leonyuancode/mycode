@@ -1,0 +1,49 @@
+Command line instructions
+
+#创建分之
+git switch -c dev
+git switch dev/master 切换分之
+
+git add -A  添加所有变化
+git add -u  添加被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add .   添加新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+
+$ git remote add origin https://github.com/leonyuancode/mycode.git
+
+
+请求合并
+git push -u origin {分支名称}
+
+1. 查看远程仓库 git remote -v
+
+2从远程获取最新版本到本地 
+git pull origin <remote_branch>：<local_branch>
+git pull origin <remote_branch>
+git pull
+
+Git global setup
+git config --global user.name "Liang, Yuanyuan"
+git config --global user.email "541206694@qq.com"
+
+Create a new repository
+git clone git@www.seek-data.com:ecnu/trading_strategy_op.git
+cd trading_strategy_op
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder
+cd existing_folder
+git init
+git remote add origin git@www.seek-data.com:ecnu/trading_strategy_op.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@www.seek-data.com:ecnu/trading_strategy_op.git
+git push -u origin --all
+git push -u origin --tags
